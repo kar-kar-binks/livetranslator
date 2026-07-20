@@ -1,0 +1,12 @@
+title: '[Idea]: '
+labels: [idea]
+body:
+  - type: markdown
+    attributes:
+      value: Share an idea for LiveTranslate — new languages, workflow tweaks, model swaps, anything.
+  - type: textarea
+    id: idea
+    attributes:
+      label: Your idea
+    validations:
+      required: true

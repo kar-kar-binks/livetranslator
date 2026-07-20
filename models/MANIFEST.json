@@ -1,0 +1,55 @@
+{
+  "$comment": "Describes the local AI models LiveTranslate uses. Weights are NOT committed to git (see .gitignore) — run `npm run setup:models` to fetch them once; the app is fully offline afterward.",
+  "stt": {
+    "engine": "whisper.cpp",
+    "repo": "https://github.com/ggerganov/whisper.cpp",
+    "acceleration": "Metal (Apple Silicon GPU)",
+    "variants": [
+      {
+        "id": "whisper-tiny",
+        "file": "ggml-tiny.bin",
+        "sizeMb": 75,
+        "notes": "Fastest, lower accuracy"
+      },
+      {
+        "id": "whisper-base",
+        "file": "ggml-base.bin",
+        "sizeMb": 142,
+        "notes": "Recommended default"
+      },
+      {
+        "id": "whisper-small",
+        "file": "ggml-small.bin",
+        "sizeMb": 466,
+        "notes": "Higher accuracy, more CPU/GPU"
+      },
+      {
+        "id": "whisper-medium",
+        "file": "ggml-medium-q5_0.bin",
+        "sizeMb": 539,
+        "notes": "Best accuracy, quantized q5_0"
+      }
+    ]
+  },
+  "translate": {
+    "engine": "CTranslate2 + NLLB-200 distilled 600M",
+    "sourceModel": "facebook/nllb-200-distilled-600M",
+    "quantization": "int8",
+    "languages": 200,
+    "sizeMb": 620
+  },
+  "tts": {
+    "engine": "Piper",
+    "repo": "https://github.com/rhasspy/piper",
+    "voices": [
+      "en_US-lessac-medium",
+      "es_ES-davefx-medium",
+      "fr_FR-siwis-medium",
+      "de_DE-thorsten-medium"
+    ],
+    "sizeMbPerVoice": 63
+  },
+  "vad": {
+    "engine": "Energy + zero-crossing VAD (built-in, no model weights required)"
+  }
+}

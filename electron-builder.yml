@@ -1,0 +1,60 @@
+appId: com.livetranslate.app
+productName: LiveTranslate
+copyright: Copyright © 2026 LiveTranslate Contributors
+directories:
+  output: release/${version}
+  buildResources: build
+files:
+  - dist/**/*
+  - dist-electron/**/*
+  - package.json
+extraResources:
+  - from: resources/bin
+    to: bin
+    filter: ['**/*']
+  - from: resources/python
+    to: python
+    filter: ['**/*']
+  - from: models
+    to: models
+    filter: ['**/*']
+  - from: src/ai/translate
+    to: ai
+    filter: ['*.py']
+asarUnpack:
+  - resources/bin/**
+  - resources/python/**
+mac:
+  category: public.app-category.productivity
+  icon: build/icon.icns
+  artifactName: ${productName}-${version}-${arch}.${ext}
+  # Builds for the machine's own CPU architecture only. torch/ctranslate2/
+  # onnxruntime are native wheels installed by scripts/setup-models.sh for
+  # THIS machine's arch — there's no cross-compiling them from here. To ship
+  # an Intel build, run `npm run setup:models && npm run dist:mac` on an
+  # Intel Mac (or under Rosetta); to ship Apple Silicon, do the same on
+  # Apple Silicon. Each produces a fully self-contained .app for its arch.
+  target:
+    - target: dmg
+    - target: zip
+  hardenedRuntime: true
+  gatekeeperAssess: false
+  entitlements: build/entitlements.mac.plist
+  entitlementsInherit: build/entitlements.mac.plist
+  extendInfo:
+    NSMicrophoneUsageDescription: LiveTranslate needs microphone access to transcribe and translate speech during your calls.
+    NSSpeechRecognitionUsageDescription: LiveTranslate performs on-device speech recognition to transcribe conversations.
+dmg:
+  title: ${productName} ${version} ${arch}
+  artifactName: ${productName}-${version}-${arch}.${ext}
+  contents:
+    - x: 130
+      y: 220
+    - x: 410
+      y: 220
+      type: link
+      path: /Applications
+publish:
+  provider: github
+  owner: livetranslate
+  repo: livetranslate

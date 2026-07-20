@@ -1,0 +1,32 @@
+<svg width="1180" height="760" viewBox="0 0 1180 760" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,Helvetica,Arial,sans-serif">
+  <rect width="1180" height="760" rx="16" fill="#101012"/>
+  <rect x="0" y="0" width="1180" height="56" rx="16" fill="#18181b"/>
+  <circle cx="26" cy="28" r="6" fill="#ff5f57"/>
+  <circle cx="46" cy="28" r="6" fill="#febc2e"/>
+  <circle cx="66" cy="28" r="6" fill="#28c840"/>
+  <rect x="480" y="16" width="110" height="24" rx="6" fill="#27272a"/>
+  <text x="535" y="32" fill="#d4d4d8" font-size="12" text-anchor="middle">🇪🇸 Spanish</text>
+  <rect x="600" y="16" width="24" height="24" rx="6" fill="#27272a"/>
+  <rect x="640" y="16" width="110" height="24" rx="6" fill="#27272a"/>
+  <text x="695" y="32" fill="#d4d4d8" font-size="12" text-anchor="middle">🇺🇸 English</text>
+
+  <!-- incoming bubble -->
+  <circle cx="60" cy="120" r="14" fill="#3f3f46"/>
+  <rect x="86" y="106" width="420" height="70" rx="16" fill="#27272a"/>
+  <text x="102" y="130" fill="#e4e4e7" font-size="14">¿Cómo estás? Te llamo por el pedido de ayer.</text>
+  <text x="102" y="152" fill="#818cf8" font-size="14" font-weight="600">How are you? I'm calling about yesterday's order.</text>
+
+  <!-- outgoing bubble -->
+  <rect x="674" y="196" width="420" height="70" rx="16" fill="#4a63f5"/>
+  <circle cx="1120" cy="210" r="14" fill="#4a63f5"/>
+  <text x="690" y="220" fill="#ffffff" font-size="14" opacity="0.9">I'm doing well, thank you! Let me check on that.</text>
+  <text x="690" y="242" fill="#ffffff" font-size="14" font-weight="600">¡Estoy bien, gracias! Déjame revisar eso.</text>
+  <rect x="900" y="272" width="150" height="26" rx="13" fill="#3946d9"/>
+  <text x="975" y="289" fill="#ffffff" font-size="11" text-anchor="middle" font-weight="700">▶ Speak Translation</text>
+
+  <rect x="0" y="660" width="1180" height="100" fill="#18181b"/>
+  <rect x="490" y="690" width="200" height="52" rx="16" fill="#4a63f5"/>
+  <text x="590" y="722" fill="#ffffff" font-size="15" text-anchor="middle" font-weight="700">🎙 Start Listening</text>
+
+  <text x="590" y="420" fill="#3f3f46" font-size="13" text-anchor="middle">(placeholder screenshot — replace with a real capture)</text>
+</svg>

@@ -1,0 +1,27 @@
+node_modules/
+dist/
+dist-electron/
+release/
+*.log
+npm-debug.log*
+.DS_Store
+.env
+.env.local
+.vscode/*
+!.vscode/extensions.json
+*.tsbuildinfo
+
+# Local AI models and their tokenizers/configs (downloaded via
+# scripts/setup-models.sh, not committed — see models/MANIFEST.json)
+models/**
+!models/MANIFEST.json
+!models/*/
+!models/*/.gitkeep
+
+# Native binaries and portable Python runtime fetched at setup time
+# (resources/python/ holds the piper-tts CLI too — see scripts/setup-models.sh)
+resources/bin/whisper-cli
+resources/python/
+
+# Build tooling provisioned by scripts/setup-models.sh
+.build/

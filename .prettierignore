@@ -1,0 +1,11 @@
+node_modules
+dist
+dist-electron
+release
+models
+.build
+resources/bin
+resources/python
+build/icon.iconset
+pnpm-lock.yaml
+package-lock.json

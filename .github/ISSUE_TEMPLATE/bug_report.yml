@@ -1,0 +1,60 @@
+name: Bug report
+description: Something isn't working as expected
+labels: [bug, triage]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: A clear description of the bug.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open LiveTranslate
+        2. Select Spanish -> English
+        3. Press Start Listening
+        4. ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: LiveTranslate version
+      placeholder: '0.1.0'
+    validations:
+      required: true
+  - type: dropdown
+    id: chip
+    attributes:
+      label: Mac chip
+      options: [Apple Silicon (M1/M2/M3/M4), Intel]
+    validations:
+      required: true
+  - type: input
+    id: macos
+    attributes:
+      label: macOS version
+      placeholder: 'macOS 15.1'
+    validations:
+      required: true
+  - type: dropdown
+    id: model
+    attributes:
+      label: STT model in use
+      options: [whisper-tiny, whisper-base, whisper-small, whisper-medium, 'Not sure']
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs
+      description: See Help menu or `~/Library/Logs/LiveTranslate/main.log`
+      render: shell
