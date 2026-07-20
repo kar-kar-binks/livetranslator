@@ -39,7 +39,7 @@
     "@commitlint/config-conventional": "^19.5.0",
     "@electron/notarize": "^2.5.0",
     "@types/node": "^22.9.0",
-    "@types/react": "^18.3.12",
+    "@types/react": "^19.2.17",
     "@types/react-dom": "^18.3.1",
     "@typescript-eslint/eslint-plugin": "^8.14.0",
     "@typescript-eslint/parser": "^8.14.0",
@@ -68,7 +68,7 @@
     "electron-updater": "^6.3.9",
     "framer-motion": "^11.11.17",
     "lucide-react": "^0.454.0",
-    "react": "^18.3.1",
+    "react": "^19.2.7",
     "react-dom": "^18.3.1",
     "zustand": "^5.0.1"
   }
